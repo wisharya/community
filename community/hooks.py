@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from . import __version__ as app_version
+from .install import APP_LOGO_URL
 
 app_name = "community"
 app_title = "Community"
@@ -10,6 +11,9 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "jannat@erpnext.com"
 app_license = "AGPL"
+
+app_logo_url = APP_LOGO_URL
+
 # Includes in <head>
 # ------------------
 
@@ -59,7 +63,7 @@ web_include_css = "/assets/css/community.css"
 # ------------
 
 # before_install = "community.install.before_install"
-# after_install = "community.install.after_install"
+after_install = "community.install.after_install"
 
 # Desk Notifications
 # ------------------
@@ -136,7 +140,6 @@ primary_rules = [
     {"from_route": "/sketches/<sketch>", "to_route": "sketches/sketch"},
     {"from_route": "/courses/<course>", "to_route": "courses/course"},
     {"from_route": "/courses/<course>/<topic>", "to_route": "courses/topic"},
-    {"from_route": "/hackathons", "to_route": "hackathons"},
     {"from_route": "/hackathons/<hackathon>", "to_route": "hackathons/hackathon"},
     {"from_route": "/hackathons/<hackathon>/<project>", "to_route": "hackathons/project"},
     {"from_route": "/dashboard", "to_route": ""},
@@ -164,7 +167,8 @@ whitelist = [
     "/dashboard",
     "/join-request"
     "/add-a-new-batch",
-    "/new-sign-up"
+    "/new-sign-up",
+    "/message"
 ]
 whitelist_rules = [{"from_route": p, "to_route": p[1:]} for p in whitelist]
 
