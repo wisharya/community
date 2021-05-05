@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "field:full_name",
  "allow_guest_to_view": 1,
  "allow_rename": 1,
  "creation": "2021-02-12 15:47:23.591567",
